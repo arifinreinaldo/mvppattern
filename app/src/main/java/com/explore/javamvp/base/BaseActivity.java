@@ -25,6 +25,15 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void showToast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    protected boolean hasValue(String value) {
+        value = value == null ? "" : value;
+        if (!value.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
