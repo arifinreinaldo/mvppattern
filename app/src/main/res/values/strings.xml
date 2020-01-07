@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JavaMVP</string>
+    <string name="hint_pokemon">Search your pokemon</string>
 </resources>
