@@ -10,9 +10,9 @@ import retrofit2.Retrofit;
 
 public class DetailPresenter {
     private PokemonApi pokemonApi;
-    private DetailListener listener;
+    private DetailView listener;
 
-    public DetailPresenter(DetailListener listener, Retrofit retrofit) {
+    public DetailPresenter(DetailView listener, Retrofit retrofit) {
         pokemonApi = retrofit.create(PokemonApi.class);
         this.listener = listener;
     }

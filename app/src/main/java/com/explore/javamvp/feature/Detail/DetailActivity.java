@@ -7,7 +7,7 @@ import com.explore.javamvp.R;
 import com.explore.javamvp.base.BaseActivity;
 import com.explore.javamvp.model.detail.Pokemon;
 
-public class DetailActivity extends BaseActivity implements DetailListener {
+public class DetailActivity extends BaseActivity implements DetailView {
     private DetailPresenter presenter = null;
     private TextView tvPokemon;
 
