@@ -12,10 +12,12 @@ public class DetailActivity extends BaseActivity implements DetailView {
     private TextView tvPokemon;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+    protected int getLayoutId() {
+        return R.layout.activity_detail;
+    }
 
+    @Override
+    protected void bindLayoutActivity() {
         tvPokemon = findViewById(R.id.tvPokemon);
 
         String url = getIntent().getStringExtra("ID");
@@ -24,7 +26,6 @@ public class DetailActivity extends BaseActivity implements DetailView {
             presenter.showDetail(url);
         }
     }
-
     @Override
     public void showDetail(Pokemon pokemon) {
         if (pokemon != null) {

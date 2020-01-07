@@ -24,10 +24,13 @@ public class MainActivity extends BaseActivity implements MainView {
     PokemonAdapter pokemonAdapter = null;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void bindLayoutActivity() {
         page = 1;
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         presenter = new MainPresenter(this, retrofit);
         pokemonAdapter = new PokemonAdapter(this);
         rvList = findViewById(R.id.rvListPokemon);
